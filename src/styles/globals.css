@@ -1,0 +1,233 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: "Iransans";
+    src: url("../fonts/Iranian\ Sans.ttf");
+    font-weight: normal;
+}
+
+
+
+/*-------------------------Lay out------------------------------*/
+
+body {
+    font-family: "Iransans", Arial, Helvetica, sans-serif;
+}
+
+/* width */
+
+aside::-webkit-scrollbar {
+    width: 3px;
+    display: none;
+}
+
+
+.content {
+    @apply h-[calc(100vh-196.2px)] md:h-[calc(100vh-105.6px)] overflow-y-scroll;
+}
+
+.content::-webkit-scrollbar {
+    width: 9px;
+    /* display: none; */
+}
+
+/* Track */
+.content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+.content::-webkit-scrollbar-thumb {
+    @apply bg-gray-light;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+.content::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.header-row {
+    @apply flex justify-between gap-2 p-2 border-b-2 border-gray-light flex-row-reverse w-full overflow-x-scroll;
+}
+
+.header-row::-webkit-scrollbar {
+    width: 9px;
+    height: 2px;
+    /* display: none; */
+}
+
+/* Track */
+.header-row::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+.header-row::-webkit-scrollbar-thumb {
+    @apply bg-gray-light;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+.header-row::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/*-------------------------Lay out------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------Buttons--------------------------*/
+input,
+select {
+
+    background-color: transparent;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.input-primary {
+    @apply border w-full border-gray-light p-4 my-2 rounded-sm text-lg placeholder:text-sm text-gray-main placeholder:text-gray-main outline-none;
+}
+
+.input-clack-primary {
+    @apply h-[72px] bg-gray-light;
+}
+
+/*-----------------------Buttons--------------------------*/
+
+
+
+/*-----------------------Buttons--------------------------*/
+
+.btn-sidebar {
+    @apply py-5 relative text-center rounded-sm w-full cursor-pointer flex justify-around items-center hover:text-white-main;
+    background: transparent;
+}
+
+.btn-sidebar svg path {
+    @apply stroke-primary-light;
+}
+
+.btn-sidebar:hover svg path {
+    @apply stroke-white-main;
+}
+
+.btn-sidebar.active svg path {
+    @apply stroke-white-main;
+}
+
+.btn-sidebar:hover {
+    background: linear-gradient(307.34deg, #2393B0 11.41%, #076E8A 80.64%);
+    box-shadow: 4px 4px 20px 0px #6D8DAD40;
+}
+
+.btn-sidebar.active {
+    background: linear-gradient(307.34deg, #2393B0 11.41%, #076E8A 80.64%);
+    box-shadow: 4px 4px 20px 0px #6D8DAD40;
+}
+
+@media (max-width : 768px) {
+    .btn-sidebar.active {
+        @apply py-5 relative text-center rounded-sm w-full cursor-pointer flex justify-around items-center hover:text-white-main;
+        background: transparent;
+    }
+}
+
+
+.drop-box {
+    @apply w-full z-50 rounded-sm hidden cursor-default bg-white-main;
+    @apply md:fixed md:h-[calc(100vh-20px)] md:w-[260px] md:hover:flex md:top-[10px] md:right-[260px] md:overflow-y-scroll;
+    border: 1.5px solid #F1F6FC;
+}
+
+.drop-box.active {
+    @apply w-full z-50 rounded-sm flex md:hidden md:w-[260px] cursor-default;
+    border: 1.5px solid #F1F6FC;
+}
+
+.drop-box .menu-list {
+    @apply w-full text-right p-4 flex justify-between items-start flex-col;
+}
+
+.drop-box.active .menu-list {
+    @apply text-center p-4 flex justify-between items-start flex-col;
+}
+
+.btn-sidebar:hover+.drop-box {
+    @apply md:flex;
+}
+
+
+
+.drop-box::-webkit-scrollbar {
+    width: 9px;
+    /* display: none; */
+}
+
+/* Track */
+.drop-box::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+.drop-box::-webkit-scrollbar-thumb {
+    @apply bg-gray-light;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+.drop-box::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+
+
+
+
+
+.btn-success {
+    @apply rounded-sm bg-success text-white-main font-[600] w-[140px] text-center py-2;
+}
+
+.btn-error.outline {
+    @apply rounded-sm outline-[2px] outline-error text-error font-[600] w-[140px] text-center py-2;
+}
+.btn-success-sm {
+    @apply rounded-sm bg-success text-white-main font-[600] w-[60px] text-center py-2;
+}
+
+.btn-error-sm.outline {
+    @apply rounded-sm outline-[2px] outline-error text-error font-[600] w-[60px] text-center py-2;
+}
+
+
+.btn-next,
+.btn-prev {
+    @apply bg-gray-light text-gray-main cursor-default rounded-sm text-center h-[40px] w-[70px];
+}
+
+.btn-next.active,
+.btn-prev.active {
+    @apply bg-gray-light text-primary-main cursor-pointer rounded-sm text-center h-[40px] w-[70px] font-[600];
+}
+
+.btn-count {
+    @apply bg-primary-light text-white-main cursor-pointer rounded-sm text-center h-[40px] w-[40px];
+}
+
+/*-----------------------Buttons--------------------------*/

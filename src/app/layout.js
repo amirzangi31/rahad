@@ -1,7 +1,7 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
+import Layout from '@/components/layout/Layout'
+import '../styles/globals.css'
+import OpenMenuContextProvider from '@/context/OpenMenuContextProvider'
 
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Create Next App',
@@ -9,9 +9,24 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+  
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="ar" dir='rtl'>
+      <head>
+        <link
+          href="https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.css"
+          rel="stylesheet"
+        />
+      </head>
+
+      <body >
+        <OpenMenuContextProvider>
+          <Layout>
+
+            {children}
+          </Layout>
+        </OpenMenuContextProvider>
+      </body>
     </html>
   )
 }
