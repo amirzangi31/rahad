@@ -140,11 +140,13 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .btn-sidebar:hover {
+    @apply text-white-main ;
     background: linear-gradient(307.34deg, #2393B0 11.41%, #076E8A 80.64%);
     box-shadow: 4px 4px 20px 0px #6D8DAD40;
 }
 
 .btn-sidebar.active {
+    @apply text-white-main ;
     background: linear-gradient(307.34deg, #2393B0 11.41%, #076E8A 80.64%);
     box-shadow: 4px 4px 20px 0px #6D8DAD40;
 }
