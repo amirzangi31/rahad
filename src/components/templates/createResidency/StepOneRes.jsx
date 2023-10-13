@@ -9,7 +9,7 @@ import OclackComponentD from "../../modules/OclackComponentD";
 import MapComponent from "../../modules/MapComponent";
 import PageCount from "../../modules/PageCount";
 import ModalContent from "@/components/modules/ModalContent";
-import { selectDataRange, selectDataType } from "@/data/selectData";
+import { codeData, selectDataRange, selectDataType } from "@/data/selectData";
 
 
 const breadCrumbs = [
@@ -88,7 +88,7 @@ const StepOneRes = ({ step, setStep }) => {
       <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="flex justify-between items-center gap-2">
           <div className="w-3/12 md:w-4/12 lg:w-3/12 ">
-            <FormControlSelect title="کد شهر " placeholder="+98" />
+            <FormControlSelect title="کد شهر " placeholder="+98" data={codeData} />
           </div>
           <div className="w-9/12 md:w-8/12 lg:w-9/12 ">
             <FormControlInput

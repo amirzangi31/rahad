@@ -74,6 +74,23 @@ const selectDataType = [
       icon: <Best />,
     },
   ];
+const codeData = [
+  {
+    name : "034",
+    value : "034"
+  },
+  {
+    name : "095",
+    value : "095"
+  },
+  {
+    name : "891",
+    value : "891"
+  },
+  {
+    name : "025",
+    value : "025"
+  },
+]
 
-
-  export {selectDataType , selectDataRange}
+  export {selectDataType , selectDataRange , codeData}
