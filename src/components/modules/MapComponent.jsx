@@ -1,58 +1,34 @@
-"use client"
-import { useEffect, useRef, useState } from "react";
-// import "@neshan-maps-platform/react-openlayers/dist/style.css"
+import React, { useState } from "react";
 
-import NeshanMap from "@neshan-maps-platform/react-openlayers";
+import ReactMapGL, {
+  
+  Marker,
+  
+} from "react-map-gl";
+import "mapbox-gl/dist/mapbox-gl.css";
 
 const MapComponent = () => {
-  const mapRef = useRef(null);
-
-  const [ol, setOl] = useState();
-  const [olMap, setOlMap] = useState();
-
-  const onInit = (ol, map) => {
-    setOl(ol);
-    setOlMap(map);
-
-    setTimeout(() => {
-      const view = map.getView();
-
-      view.animate({
-        center: ol.proj.fromLonLat([51.36281969540723, 35.69672648316882]),
-        zoom: 12,
-        duration: 1000,
-      });
-    }, 2000);
-  };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (mapRef.current?.map) {
-        mapRef.current?.map.setMapType("standard-night");
-        clearInterval(interval);
-      }
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <>
-      <NeshanMap
-        mapKey="web.6a9241312d034ce9bad6d3e7193efc40"
-        defaultType="neshan"
-        center={{ latitude: 35.7665394, longitude: 51.4749824 }}
-        style={{ height: "300px", width: "100%" }}
-        onInit={onInit}
-        zoom={13}
-        traffic={false}
-        on={[
-          "click",
-          (event) => {
-            console.log("amirzangiabadi")
-          },
-        ]}
-      ></NeshanMap>
-    </>
+    <div className="h-[300px]">
+      <ReactMapGL
+        mapboxAccessToken="pk.eyJ1IjoiYW1pcnphbmdpIiwiYSI6ImNrdzFzeW9tYTFvenIyb2xja3BsbzZ2angifQ.sew7rhHcggMIiNQwurpN9Q"
+        initialViewState={{
+          latitude: 35.690827570339636,
+          longitude: 51.39253965697321,
+          zoom:16,
+        }}
+        mapStyle="mapbox://styles/mapbox/streets-v11"
+      >
+        <Marker
+          latitude={35.690827570339636}
+          longitude={51.39253965697321}
+          draggable
+          onDragEnd={(e) =>
+            console.log(e)
+          }
+        />
+      </ReactMapGL>
+    </div>
   );
 };
 

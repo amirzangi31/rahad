@@ -10,7 +10,7 @@ const ButtonHeader = ({icon , color , name , count}) => {
         <span>
             {count}
         </span>
-        <p>
+        <p className='text-center'>
             {name}
         </p>
     </div>
