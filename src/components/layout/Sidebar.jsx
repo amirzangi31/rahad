@@ -1,15 +1,22 @@
 "use client";
 
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ButtonSidebar from "../modules/ButtonSidebar";
 import sidebarData from "@/data/SidebarData";
 import Loggout from "@/icons/iconsSidebar/Loggout";
 import { OpenMenuContext } from "@/context/OpenMenuContextProvider";
 import CloseIcon from "@/icons/CloseIcon";
+import { usePathname } from "next/navigation";
 
 const Sidebar = () => {
-  const {open , closeHandler  } = useContext(OpenMenuContext)
+  const { open, closeHandler } = useContext(OpenMenuContext);
+  const pathname = usePathname();
 
+  
+
+  useEffect(() => {
+    closeHandler();
+  }, [pathname]);
   return (
     <aside
       className={`md:w-[260px] pb-10 px-2 md:px-0  overflow-y-scroll bg-white-main border-l-2 border-gray-light/30 w-full h-full  absolute top-0 ${
@@ -17,9 +24,12 @@ const Sidebar = () => {
       } md:right-0 md:pr-5 flex justify-start items-center flex-col gap-2`}
     >
       <div className="h-[105.6px] flex justify-between md:justify-center w-full px-4">
-      <div className="flex justify-center items-center md:hidden" onClick={() => closeHandler()}>
-          <CloseIcon /> 
-      </div>
+        <div
+          className="flex justify-center items-center md:hidden"
+          onClick={() => closeHandler()}
+        >
+          <CloseIcon />
+        </div>
         <svg
           width="114"
           height="105.6"
@@ -32,9 +42,6 @@ const Sidebar = () => {
             fill="#136081"
           />
         </svg>
-
-          
-
       </div>
       {sidebarData.map((item, index) => (
         <ButtonSidebar key={index} {...item} />
