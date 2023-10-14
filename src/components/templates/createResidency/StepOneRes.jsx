@@ -71,7 +71,7 @@ const StepOneRes = ({ step, setStep }) => {
       </div>
       <div className="grid grid-cols-1 tablet:grid-cols-2 gap-8 mt-8">
         <div className="flex justify-between items-start flex-col">
-          <label className="text-primary-main text-xl font-[800]">
+          <label className="text-primary-main text-xl font-[500] px-4">
             ساعت تخلیه اتاق
           </label>
           <div className="input-primary" style={{ padding: "20px 0 " }}>
@@ -79,7 +79,7 @@ const StepOneRes = ({ step, setStep }) => {
           </div>
         </div>
         <div className="flex justify-between items-start flex-col">
-          <label className="text-primary-main text-xl font-[800]">
+          <label className="text-primary-main text-xl font-[500] px-4">
             ساعت تحویل اتاق
           </label>
           <div className="input-primary" style={{ padding: "20px 0 " }}>
