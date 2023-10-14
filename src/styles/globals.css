@@ -2,19 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+	font-family: IRANSansX;
+	font-style: normal;
+	font-weight: 100;
+	src: url('../fonts/woff/IRANSansX-Thin.woff') format('woff'),   
+	url('../fonts/woff2/IRANSansX-Thin.woff2') format('woff2');		
+}
 
 @font-face {
-    font-family: "Iransans";
-    src: url("../fonts/Iranian\ Sans.ttf");
-    font-weight: normal;
+	font-family: IRANSansX;
+	font-style: normal;
+	font-weight: 200;
+	src: url('../fonts/woff/IRANSansX-UltraLight.woff') format('woff'),   
+	url('../fonts/woff2/IRANSansX-UltraLight.woff2') format('woff2');	
 }
+
+@font-face {
+	font-family: IRANSansX;
+	font-style: normal;
+	font-weight: 300;
+	src: url('../fonts/woff/IRANSansX-Light.woff') format('woff'),   
+	url('../fonts/woff2/IRANSansX-Light.woff2') format('woff2');		 
+}
+
+@font-face {
+	font-family: IRANSansX;
+	font-style: normal;
+	font-weight: 500;
+	src: url('../fonts/woff/IRANSansX-Medium.woff') format('woff'),   
+	url('../fonts/woff2/IRANSansX-Medium.woff2') format('woff2');		 
+}
+
+@font-face {
+	font-family: IRANSansX;
+	font-style: normal;
+	font-weight: 600;
+	src: url('../fonts/woff/IRANSansX-DemiBold.woff') format('woff'),   
+	url('../fonts/woff2/IRANSansX-DemiBold.woff2') format('woff2');	 
+}
+
+@font-face {
+	font-family: IRANSansX;
+	font-style: normal;
+	font-weight: 800;
+	src: url('../fonts/woff/IRANSansX-ExtraBold.woff') format('woff'),   
+	url('../fonts/woff2/IRANSansX-ExtraBold.woff2') format('woff2');		 
+}
+
+@font-face {
+	font-family: IRANSansX;
+	font-style: normal;
+	font-weight: 900;
+	src: url('../fonts/woff/IRANSansX-Black.woff') format('woff'),   
+	url('../fonts/woff2/IRANSansX-Black.woff2') format('woff2');		 
+}
+
+@font-face {
+	font-family: IRANSansX;
+	font-style: normal;
+	font-weight: bold;
+	src: url('../fonts/woff/IRANSansX-Bold.woff') format('woff'),   
+	url('../fonts/woff2/IRANSansX-Bold.woff2') format('woff2');	 
+}
+
+@font-face {
+	font-family: IRANSansX;
+	font-style: normal;
+	font-weight: normal;
+	src: url('../fonts/woff/IRANSansX-Regular.woff') format('woff'),   
+	url('../fonts/woff2/IRANSansX-Regular.woff2') format('woff2');	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 /*-------------------------Lay out------------------------------*/
 
 body {
-    font-family: "Iransans", Arial, Helvetica, sans-serif;
+    font-family: IRANSansX , Arial, Helvetica, sans-serif;
+    font-weight: 400;
 }
 
 /* width */
@@ -26,7 +105,7 @@ aside::-webkit-scrollbar {
 
 
 .content {
-    @apply h-[calc(100vh-196.2px)] md:h-[calc(100vh-105.6px)] overflow-y-scroll;
+    @apply h-[calc(100vh-196.2px)] md:h-[calc(100vh-113.6px)] overflow-y-scroll;
 }
 
 .content::-webkit-scrollbar {
@@ -51,7 +130,7 @@ aside::-webkit-scrollbar {
 }
 
 .header-row {
-    @apply flex justify-between gap-2 p-2 border-b-2 border-gray-light flex-row-reverse w-full overflow-x-scroll;
+    @apply flex justify-between  p-2 border-b-2 border-gray-light flex-row-reverse w-full overflow-x-scroll;
 }
 
 .header-row::-webkit-scrollbar {
@@ -126,7 +205,7 @@ input[type=number]::-webkit-inner-spin-button {
     @apply stroke-white-main;
 }
 
-.btn-sidebar.active svg {
+.btn-sidebar.active .arrow-btn {
     transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
@@ -140,13 +219,13 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .btn-sidebar:hover {
-    @apply text-white-main ;
+    @apply text-white-main;
     background: linear-gradient(307.34deg, #2393B0 11.41%, #076E8A 80.64%);
     box-shadow: 4px 4px 20px 0px #6D8DAD40;
 }
 
 .btn-sidebar.active {
-    @apply text-white-main ;
+    @apply text-white-main;
     background: linear-gradient(307.34deg, #2393B0 11.41%, #076E8A 80.64%);
     box-shadow: 4px 4px 20px 0px #6D8DAD40;
 }
@@ -180,7 +259,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .drop-box .menu-list {
-    @apply w-full text-right p-4 flex justify-between items-start flex-col;
+    @apply w-full text-right p-4 flex justify-between items-start flex-col gap-2.5;
 }
 
 .drop-box.active .menu-list {
@@ -239,12 +318,12 @@ input[type=number]::-webkit-inner-spin-button {
 
 .btn-next,
 .btn-prev {
-    @apply bg-gray-light text-gray-main cursor-default rounded-sm text-center h-[40px] w-[70px];
+    @apply bg-gray-light text-gray-main cursor-default rounded-sm text-center h-[40px] w-[70px] font-[400];
 }
 
 .btn-next.active,
 .btn-prev.active {
-    @apply bg-gray-light text-primary-main cursor-pointer rounded-sm text-center h-[40px] w-[70px] font-[600];
+    @apply bg-gray-light text-primary-main cursor-pointer rounded-sm text-center h-[40px] w-[70px] ;
 }
 
 .btn-count {

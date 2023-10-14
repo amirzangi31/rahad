@@ -3,13 +3,13 @@ import React from 'react'
 
 const ButtonHeader = ({icon , color , name , count}) => {
   return (
-    <div className='flex flex-col items-center justify-between text-sm'>
+    <div className='flex flex-col  items-center justify-between text-sm min-w-[80px]'>
         <div className='w-[50px] h-[50px]  rounded-full flex justify-center items-center ' style={{background : color}}>
             {icon}
         </div>
-        <span>
+        <p className='mt-2'>
             {count}
-        </span>
+        </p>
         <p className='text-center'>
             {name}
         </p>

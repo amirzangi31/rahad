@@ -19,10 +19,10 @@ const OclackComponentD = () => {
     <div className="flex justify-between items-center flex-col px-5">
       <div className="flex justify-between items-center  w-full">
         <div className="flex justify-center items-center pl-2 w-2/12 ">
-          <div className="h-[72px] bg-gray-light rounded-sm flex justify-between items-center flex-col overflow-hidden">
+          <div className="h-[72px] border border-gray-light rounded-sm flex justify-between items-center flex-col overflow-hidden">
             <span
-              className={`block cursor-pointer p-2  ${
-                !pm && "bg-gray-main text-white-main"
+              className={`block cursor-pointer p-2   ${
+                !pm? "bg-gray-main text-white-main" : "bg-white-main"
               }`}
               onClick={() => setPm(false)}
             >
@@ -30,7 +30,7 @@ const OclackComponentD = () => {
             </span>
             <span
               className={`block cursor-pointer p-2 border-t ${
-                pm && "bg-gray-main text-white-main"
+                pm ? "bg-gray-main text-white-main" : "bg-white-main"
               }`}
               onClick={() => setPm(true)}
             >

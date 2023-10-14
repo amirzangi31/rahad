@@ -27,21 +27,23 @@ module.exports = {
     colors: {
       primary: {
         light: "#2393B0",
-        main: "#097693",
+        main: "#003666",
       },
       success: "#23B05B",
       error: "#FB2047",
       gray: {
-        light: "#D4DADE",
+        light: "#C2C7CC",
         main: "#A2AFB8",
+        dark : "#828282"
       },
       text: {
         light: "#294046",
-        main: "#01252E"
+        main: "#49454F"
       },
       white: {
         light: "#FAFAFA",
         main: "#FFFFFF"
+        
       }
     },
     extend: {

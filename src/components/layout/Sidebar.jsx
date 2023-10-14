@@ -23,7 +23,7 @@ const Sidebar = () => {
         open ? "right-0" : "right-[-100%]"
       } md:right-0 md:pr-5 flex justify-start items-center flex-col gap-2`}
     >
-      <div className="h-[105.6px] flex justify-between md:justify-center w-full px-4">
+      <div className="h-[113.6px] flex justify-between md:justify-center w-full px-4">
         <div
           className="flex justify-center items-center md:hidden"
           onClick={() => closeHandler()}
@@ -32,7 +32,7 @@ const Sidebar = () => {
         </div>
         <svg
           width="114"
-          height="105.6"
+          height="113.6"
           viewBox="0 0 114 35"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

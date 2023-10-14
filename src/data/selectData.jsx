@@ -16,15 +16,66 @@ const selectDataType = [
       icon: "",
     },
     {
-      name: "ویلا",
-      value: "villa",
+      name: "هتل آپارتمان",
+      value: "aaa",
       icon: "",
     },
     {
-      name: "آپارتمان",
+      name: "سوییت",
       value: "apartment",
       icon: "",
     },
+    
+    {
+      name: "ویلا",
+      value: "apartment",
+      icon: "",
+    },
+    
+    {
+      name: "پلاژ",
+      value: "apartment",
+      icon: "",
+    },
+    
+    {
+      name: "مهمان پذیر",
+      value: "apartment",
+      icon: "",
+    },
+ 
+    {
+      name: "مسافرخانه",
+      value: "apartment",
+      icon: "",
+    },    
+    {
+      name: "مهمان سرا",
+      value: "apartment",
+      icon: "",
+    },
+
+    {
+      name: "بومگردی",
+      value: "apartment",
+      icon: "",
+    },    
+    {
+      name: "پانسیون",
+      value: "apartment",
+      icon: "",
+    },    
+    {
+      name: "واحد اقامتی",
+      value: "apartment",
+      icon: "",
+    },    
+
+
+
+
+
+
   ];
   
   const selectDataRange = [

@@ -19,7 +19,7 @@ const FormControlSelect = ({ title, placeholder, data }) => {
 
   return (
     <div className="flex justify-between items-start flex-col">
-      <label className="text-primary-main text-xl font-[800]">{title}</label>
+      <label className="text-primary-main text-xl font-[500] px-4">{title}</label>
       <div className="input-primary relative ">
         <div
           className="flex justify-between items-center cursor-pointer"
@@ -46,7 +46,7 @@ const FormControlSelect = ({ title, placeholder, data }) => {
         <div
           className={`${
             !open && "hidden"
-          } absolute top-[calc(100%-0.5rem)] left-0 w-full input-primary z-40 bg-white-main flex flex-col gap-4`}
+          } absolute top-[calc(100%-0.5rem)] left-0 w-full input-primary z-40 bg-white-main flex flex-col gap-4 font-[400]`}
         >
           {data?.map((item, index) => (
             <div

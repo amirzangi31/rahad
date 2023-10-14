@@ -15,12 +15,14 @@ const ButtonSidebar = (props) => {
         onClick={() => setActive(!active)}
       >
         <div
-          className="flex justify-around items-center w-full
+          className="flex justify-around items-center w-full font-[400]
         "
         >
           {icon}
           {name}
-          {drop && <ArrowLeftIcon />}
+          {drop && <div className="arrow-btn">
+            <ArrowLeftIcon />
+          </div>}
           {!drop && <div></div>}
         </div>
       </div>
