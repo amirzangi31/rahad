@@ -244,7 +244,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 .drop-box {
     @apply w-full z-50 rounded-sm hidden cursor-default ;
-    @apply md:fixed  md:w-full md:top-[10px] md:right-[200px] tablet:right-[270px] md:overflow-y-scroll;
+    @apply md:fixed md:max-h-[calc(100vh-20px)] md:w-full md:top-[10px] md:right-[200px] tablet:right-[270px] md:overflow-y-scroll;
    
 }
 
