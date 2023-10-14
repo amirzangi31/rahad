@@ -249,7 +249,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .drop-box__content {
-    @apply w-full md:w-[260px]  bg-white-main rounded-sm border-[1.5px] border-[#F1F6FC] ;  
+    @apply w-full md:w-[260px] md:h-full  bg-white-main rounded-sm border-[1.5px] border-[#F1F6FC] ;  
     
 }
 
