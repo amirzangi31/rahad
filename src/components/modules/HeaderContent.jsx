@@ -3,7 +3,7 @@ import SearchBox from './SearchBox'
 
 const HeaderContent = ({children}) => {
   return (
-    <header className='py-4 flex justify-between items-center'>
+    <header className='py-4 flex justify-center md:justify-between items-center'>
         <div > 
             {children}
         </div>

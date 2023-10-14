@@ -130,7 +130,7 @@ aside::-webkit-scrollbar {
 }
 
 .header-row {
-    @apply flex justify-center md:justify-between p-2 border-b-2 border-gray-light flex-row-reverse w-full overflow-x-scroll;
+    @apply flex justify-between p-2 border-b-2 border-gray-light flex-row-reverse w-full overflow-x-scroll;
 }
 
 .header-row::-webkit-scrollbar {
