@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
   
   return (
     <div className=" mx-auto h-screen overflow-x-hidden">
-      <main className="md:w-[calc(100%-260px)] md:mr-auto px-1">
+      <main className="md:w-[calc(100%-200px)]   tablet:w-[calc(100%-260px)] md:mr-auto px-1">
         <Header />
         <div className="content  " style={{ direction: "ltr" }}>
           <div className="px-3"  style={{ direction: "rtl" }}>

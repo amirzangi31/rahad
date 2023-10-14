@@ -19,7 +19,7 @@ const Sidebar = () => {
   }, [pathname]);
   return (
     <aside
-      className={`md:w-[260px] pb-10 px-2 md:px-0  overflow-y-scroll bg-white-main border-l-2 border-gray-light/30 w-full h-full  absolute top-0 ${
+      className={`md:w-[200px] tablet:w-[260px] pb-10 px-2 md:px-0  overflow-y-scroll bg-white-main border-l-2 border-gray-light/30 w-full h-full  absolute top-0 ${
         open ? "right-0" : "right-[-100%]"
       } md:right-0 md:pr-5 flex justify-start items-center flex-col gap-2`}
     >
