@@ -193,7 +193,7 @@ input[type=number]::-webkit-inner-spin-button {
 /*-----------------------Buttons--------------------------*/
 
 .btn-sidebar {
-    @apply py-5 relative text-center rounded-sm w-full cursor-pointer flex justify-around items-center hover:text-white-main;
+    @apply py-5 relative z-10 text-center rounded-sm w-full cursor-pointer flex justify-around items-center md:hover:text-white-main;
     background: transparent;
 }
 
@@ -201,16 +201,14 @@ input[type=number]::-webkit-inner-spin-button {
     @apply stroke-primary-light;
 }
 
-.btn-sidebar:hover svg path {
-    @apply stroke-white-main;
+@media (min-width : 768px) {
+
+    .btn-sidebar:hover svg path {
+    @apply stroke-white-main;}
 }
 
 .btn-sidebar.active .arrow-btn {
-    transform: rotate(-90deg);
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
+    @apply -rotate-90 md:rotate-0;
 }
 
 
@@ -218,10 +216,12 @@ input[type=number]::-webkit-inner-spin-button {
     @apply stroke-white-main;
 }
 
-.btn-sidebar:hover {
-    @apply text-white-main;
-    background: linear-gradient(307.34deg, #2393B0 11.41%, #076E8A 80.64%);
-    box-shadow: 4px 4px 20px 0px #6D8DAD40;
+@media (min-width : 768px) {
+    .btn-sidebar:hover {
+        @apply text-white-main;
+        background: linear-gradient(307.34deg, #2393B0 11.41%, #076E8A 80.64%);
+        box-shadow: 4px 4px 20px 0px #6D8DAD40;
+    }
 }
 
 .btn-sidebar.active {
@@ -230,45 +230,53 @@ input[type=number]::-webkit-inner-spin-button {
     box-shadow: 4px 4px 20px 0px #6D8DAD40;
 }
 
-@media (min-width : 768px) {
-    .btn-sidebar.active {
-        @apply py-5 relative text-center rounded-sm w-full cursor-pointer flex justify-around items-center hover:text-white-main;
-        background: transparent;
-    }
-
-    .btn-sidebar.active svg {
-        transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-    }
+.btn-child-side {
+    @apply flex justify-between items-center w-full relative;
 }
+
+.btn-child-side .arrow-btn svg {
+    @apply fill-primary-light;
+}
+
+
+
 
 
 .drop-box {
-    @apply w-full z-50 rounded-sm hidden cursor-default bg-white-main;
-    @apply md:fixed md:h-[calc(100vh-20px)] md:w-[260px] md:hover:flex md:top-[10px] md:right-[200px] tablet:right-[200px] md:overflow-y-scroll;
-    border: 1.5px solid #F1F6FC;
+    @apply w-full z-50 rounded-sm hidden cursor-default ;
+    @apply md:fixed  md:w-full md:top-[10px] md:right-[200px] tablet:right-[270px] md:overflow-y-scroll;
+   
 }
+
+.drop-box__content {
+    @apply w-full md:w-[260px]  bg-white-main rounded-sm border-[1.5px] border-[#F1F6FC] ;  
+    
+}
+
 
 
 .drop-box.active {
-    @apply w-full z-50 rounded-sm flex md:hidden md:w-[260px] cursor-default;
-    border: 1.5px solid #F1F6FC;
+    @apply w-full z-50 rounded-sm flex  cursor-default;
+    
 }
 
 .drop-box .menu-list {
-    @apply w-full text-right p-4 flex justify-between items-start flex-col gap-2.5;
+    @apply w-full text-right p-4 flex justify-start items-start flex-col gap-4;
+}
+
+.drop-box .menu-list li {
+    @apply w-full text-right;
 }
 
 .drop-box.active .menu-list {
-    @apply text-center p-4 flex justify-between items-start flex-col;
+    @apply text-center p-4 flex justify-start items-start flex-col;
 }
+
 
 .btn-sidebar:hover+.drop-box {
     @apply md:flex;
 }
+
 
 
 
@@ -335,6 +343,7 @@ input[type=number]::-webkit-inner-spin-button {
     @apply fill-error;
 
 }
-.mapboxgl-canvas{
+
+.mapboxgl-canvas {
     @apply rounded-[15px];
 }

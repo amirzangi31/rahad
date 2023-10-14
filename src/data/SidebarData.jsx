@@ -19,7 +19,8 @@ const sidebarData = [
                 drop : false
             }
         ],
-        icon : <Front /> 
+        icon : <Front /> ,
+        active : false
     },
     {
         name : "بک آفیس",
@@ -32,7 +33,8 @@ const sidebarData = [
                 drop : false
             }
         ],
-        icon : <Back />
+        icon : <Back />,
+        active : false
     },
     {
         name : "خدمات جانبی",
@@ -45,7 +47,8 @@ const sidebarData = [
                 drop : false
             }
         ],
-        icon : <Kahdamat />
+        icon : <Kahdamat />,
+        active : false
     },
     {
         name : "تنظیمات",
@@ -53,107 +56,134 @@ const sidebarData = [
         drop : true,
         children : [
             {
-                name : "تعریف اقامتگاه",
-                link : "/settings/createresidency",
-                drop : false
+                name : "اقامتگاه",
+                link : "",
+                drop : true,
+                children : [
+                    {
+                        name : "تعریف اقامتگاه",
+                        link : "/settings/createresidency",
+                        drop : false
+                    },
+                    {
+                        name : "امکانات اقامتگاه",
+                        link : "/settings/createresidency",
+                        drop : false
+                    },
+                ]
             },
             {
-                name : "تعریف اتاق",
-                link : "/settings/createresidency",
-                drop : false
+                name : "اتاق",
+                link : "",
+                drop : true,
+                children : [
+                    {
+                        name : "تعریف اتاق",
+                        link : "/settings/createresidency",
+                        drop : false
+                    },
+                    {
+                        name : "امکانات اتاق",
+                        link : "/settings/createresidency",
+                        drop : false
+                    },
+                ]
             },
             {
-                name : "مشخصات عمومی",
-                link : "/settings/createresidency",
-                drop : false
+                name : "قیمت گذاری",
+                link : "",
+                drop : true,
+                children : [
+                    {
+                        name : "تعریف قیمت",
+                        link : "/settings/createresidency",
+                        drop : false
+                    },
+                    {
+                        name : "تعریف قیمت مهمان خارجی ",
+                        link : "/settings/createresidency",
+                        drop : false
+                    },
+                    {
+                        name : "تعریف قیمت  خدمات و خدمات ",
+                        link : "/settings/createresidency",
+                        drop : false
+                    },
+                ]
             },
             {
-                name : "امکانات اقامتگاه  ",
-                link : "/settings/createresidency",
-                drop : false
+                name : "کاربر",
+                link : "",
+                drop : true,
+                children : [
+                    {
+                        name : "تعریف کاربر",
+                        link : "/settings/createresidency",
+                        drop : false
+                    },
+                    {
+                        name : "سطح دسترسی",
+                        link : "/settings/createresidency",
+                        drop : false
+                    },
+                    {
+                        name : "آژانس ها و سازمان های قراردادی",
+                        link : "/settings/createresidency",
+                        drop : false
+                    },
+                ]
             },
-            {
-                name : "امکانات اتاق    ",
-                link : "/settings/createresidency",
-                drop : false
-            },
-            {
-                name : " امکانات هتل",
-                link : "/settings/createresidency",
-                drop : false
-            },
-            {
-                name : " تعریف قیمت  ",
-                link : "/settings/createresidency",
-                drop : false
-            },
-            {
-                name : " تعریف قیمت مهمان خارجی ",
-                link : "/settings/createresidency",
-                drop : false
-            },
-            {
-                name : "",
-                link : "/settings/createresidency",
-                drop : false
-            },
-            {
-                name : "تعریف قیمت خدمات و خدمات گردشگری",
-                link : "/settings/createresidency",
-                drop : false
-            },
-            {
-                name : "تعریف کاربر",
-                link : "/settings/createresidency",
-                drop : false
-            },
-            {
-                name : "سطح دسترسی ",
-                link : "/settings/createresidency",
-                drop : false
-            },
-            {
-                name : "آژانسها و سازمانهای قراردادی",
-                link : "/settings/createresidency",
-                drop : false
-            },
+           
             {
                 name : "گارانتی",
-                link : "/settings/createresidency",
+                link : "/settings/garanti",
                 drop : false
             },
             {
                 name : "تعریف واچر",
-                link : "/settings/createresidency",
+                link : "/settings/garanti",
                 drop : false
             },
             {
                 name : "تعریف پیامک",
-                link : "/settings/createresidency",
+                link : "/settings/garanti",
                 drop : false
             },
             {
-                name : "لوکیشن هتل",
-                link : "/settings/createresidency",
+                name : "لوکیشن هتل ",
+                link : "/settings/garanti",
                 drop : false
             },
             {
                 name : "قوانین و مقررات",
-                link : "/settings/createresidency",
+                link : "/settings/garanti",
                 drop : false
             },
             {
                 name : "هتل های زنجیره ای",
-                link : "/settings/createresidency",
+                link : "/settings/garanti",
                 drop : false
             },
             {
                 name : "تغییر زبان",
-                link : "/settings/createresidency",
-                drop : false
+                link : "",
+                drop : true,
+                children : [
+                    {
+                        name : "تعریف اقامتگاه",
+                        link : "/",
+                        drop : false
+                    },
+                    {
+                        name : "امکانات اقامتگاه",
+                        link : "/settings/createresidency",
+                        drop : false
+                    },
+                ]
             },
         ],
-        icon : <Settings />
+        icon : <Settings />,
+        active : false
     },
     {
         name : "پشتیبان گیری",
@@ -166,7 +196,8 @@ const sidebarData = [
                 drop : false
             }
         ],
-        icon : <Poshtiban />
+        icon : <Poshtiban />,
+        active : false
     },
     {
         name : "پشتیبانی آنلاین",
@@ -179,18 +210,23 @@ const sidebarData = [
                 drop : false
             }
         ],
-        icon : <Online />
+        icon : <Online />,
+        active : false
     },
     
     {
         name : "جستجوی پیشرفته ",
         link : "/",
-        icon : <Search /> 
+        icon : <Search /> ,
+        drop : false,
+        active : false
     },
     {
         name : "استرداد",
         link : "/",
-        icon : <Esterdad /> 
+        icon : <Esterdad /> ,
+        drop : false,
+        active : false
     }
 ]
 

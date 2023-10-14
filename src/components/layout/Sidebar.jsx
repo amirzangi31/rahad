@@ -11,18 +11,45 @@ import { usePathname } from "next/navigation";
 const Sidebar = () => {
   const { open, closeHandler } = useContext(OpenMenuContext);
   const pathname = usePathname();
-
+  const [menuButtons , setMenuButton] = useState(sidebarData)
   
+  const noActiveAllButtons = () => {
+    console.log("first")
+    const result = menuButtons.map(item => (
+      {...item , active : false}
+      ))
+      const menu = [...result]
+      setMenuButton(menu)
+  }  
+
+  const setActiveButton = (index) => {
+    const result = menuButtons.map(item => (
+      {...item , active : false}
+    ))
+    const menu = [...result]
+
+    if(menuButtons[index].active === true) {
+        menu[index].active = false
+    }else {
+      menu[index].active = true
+    }
+
+    setMenuButton(menu)
+  }
+
 
   useEffect(() => {
     closeHandler();
+    noActiveAllButtons();
   }, [pathname]);
   return (
+    
     <aside
       className={`md:w-[200px] tablet:w-[260px] pb-10 px-2 md:px-0  overflow-y-scroll bg-white-main border-l-2 border-gray-light/30 w-full h-full  absolute top-0 ${
         open ? "right-0" : "right-[-100%]"
       } md:right-0 md:pr-5 flex justify-start items-center flex-col gap-2`}
     >
+      
       <div className="h-[113.6px] flex justify-between md:justify-center w-full px-4">
         <div
           className="flex justify-center items-center md:hidden"
@@ -43,8 +70,8 @@ const Sidebar = () => {
           />
         </svg>
       </div>
-      {sidebarData.map((item, index) => (
-        <ButtonSidebar key={index} {...item} />
+      {menuButtons.map((item, index) => (
+        <ButtonSidebar key={index} {...item} index={index}  setActive={setActiveButton} offAll={noActiveAllButtons} />
       ))}
       <div className="btn-sidebar">
         <Loggout />
@@ -52,6 +79,8 @@ const Sidebar = () => {
         <div></div>
       </div>
     </aside>
+    
+
   );
 };
 
