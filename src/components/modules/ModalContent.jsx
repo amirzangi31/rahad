@@ -24,7 +24,7 @@ const ModalContent = ({ open, setOpen }) => {
       }`}
     >ؤ
       <div className=" bg-white-main  w-[calc(100%-20px)] sm:w-[500px]  md:w-[600px]  mx-auto h-[200px] sm:h-[250px] rounded-sm border border-gray-light px-5 flex justify-center items-center ">
-        <div className="flex justify-center items-center flex-col w-9/12">
+        <div className="flex justify-center items-center flex-col w-full sm:w-10/12 md:w-9/12">
           <div className="w-full">
           <p className="text-gray-dark w-full text-right px-4">لطفا آیتم مورد نظر خود را وارد نمایید </p>
         <input type="text" className="input-primary " />
