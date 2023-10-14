@@ -33,7 +33,7 @@ const NavbarMobile = () => {
               <MenuIcon />
             </button>
           </div>
-          <div className="text-2xl font-[800] text-primary-light text-center">
+          <div className="text-2xl font-[800]  text-primary-light text-center">
             RAHAD
           </div>
           <div>
