@@ -9,7 +9,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 
 const MapComponent = () => {
   return (
-    <div className="h-[210px] w-full bg-primary-light">
+    <div className="h-[210px] w-full  rounded-full">
       <ReactMapGL
         mapboxAccessToken="pk.eyJ1IjoiYW1pcnphbmdpIiwiYSI6ImNrdzFzeW9tYTFvenIyb2xja3BsbzZ2angifQ.sew7rhHcggMIiNQwurpN9Q"
         initialViewState={{
